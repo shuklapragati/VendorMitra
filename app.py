@@ -73,5 +73,5 @@ def delete_vendor(id):
     conn.close()
     return redirect('/vendors')          
 
-if __name__ == '__main__':
-    app.run(debug=True)
+#if __name__ == '__main__':
+#   app.run(debug=True)
