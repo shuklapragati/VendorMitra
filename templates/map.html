@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="map-section">
+    <h2>Vendor Map</h2>
+    <p>Explore vendors on our map (OpenStreetMap version)</p>
+    <div id="leaflet-map"></div>
+</section>
+
+<!-- Leaflet CSS & JS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+<script>
+    var map = L.map('leaflet-map').setView([26.8467, 80.9462], 13); // Lucknow
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    // Sample Marker
+    var marker = L.marker([26.8467, 80.9462]).addTo(map);
+    marker.bindPopup("<b>Vendor Stall</b><br>Hazratganj, Lucknow").openPopup();
+</script>
+{% endblock %}

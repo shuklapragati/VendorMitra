@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="vendor-list">
+    <h2>Registered Vendors</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Category</th>
+                <th>Location</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for vendor in vendors %}
+            <tr>
+                <td data-label="Name">{{ vendor[0] }}</td>
+                <td data-label="Phone">{{ vendor[1] }}</td>
+                <td data-label="Category">{{ vendor[2] }}</td>
+                <td data-label="Location">{{ vendor[3] }}</td>
+                <td data-label="Latitude">{{ vendor[4] }}</td>
+                <td data-label="Longitude">{{ vendor[5] }}</td>
+                <td data-label="Action">
+                    <form method="POST" action="{{ url_for('delete_vendor', id=vendor[6]) }}">
+                        <button type="submit" class="btn-delete">🗑️</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endblock %}

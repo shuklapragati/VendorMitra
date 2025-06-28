@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vendorमित्र</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="logo">Vendorमित्र</div>
+        <nav class="top-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('register') }}">Register</a>
+            <a href="{{ url_for('map_page') }}">Map</a>
+            <a href="{{ url_for('govt_scheme') }}">Schemes</a>
+        </nav>
+    </header>
+   
+    <div class="main-content">
+        {% block content %}{% endblock %}
+    </div>
+    
+</body>
+</html>

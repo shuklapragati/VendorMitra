@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="hero">
+    <div class="hero-text">
+        <h1 class="brand">Vendor<span class="mitra">मित्र</span></h1>
+        <p>हर ठेला, हर दुकान — अब बनेगी डिजिटल पहचान</p>
+        <a href="/register" class="btn-register">Register Now</a>
+    </div>
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/vendor2.jpg') }}" alt="Vendor image">
+    </div>
+</div>
+
+<section class="features">
+    <h2 class="section-title">Our Key Features</h2>
+    <div class="feature-boxes">
+        <a href="{{url_for('map_page')}}" class ="box-link">
+            <div class="box">
+                <div class="icon">📍</div>
+                <h3>Location Mapping</h3>
+                <p>Your shop will appear on the digital map.</p>
+            </div>
+        </a>
+          
+        <a href="{{url_for('register')}}" class ="box-link">
+            <div class="box">
+                <div class="icon">🧾</div>
+                <h3>Easy Registration</h3>
+                <p>Fill out a form and join in minutes.</p>
+            </div>
+        </a>
+
+        <a href="{{url_for('govt_scheme')}}" class ="box-link">
+            <div class="box">
+                <div class="icon">🛠️</div>
+                <h3>Govt Scheme Support</h3>
+                <p>We help you link with government benefits.</p>
+            </div>
+        </a>    
+   
+
+        <a href="{{url_for('show_vendors')}}" class ="box-link">  
+            <div class="box">
+                <div class="icon">📢</div>
+                <h3>Connect with Customers</h3>
+                <p>Let people nearby discover your stall easily.</p>
+            </div>
+        </a>
+ 
+       
+
+    </div>
+</section>
+
+{% endblock %}

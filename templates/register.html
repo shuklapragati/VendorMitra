@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="register-section">
+    <h2>Register Your Business | अपना व्यवसाय रजिस्टर करें</h2>
+    <form method="POST" action="/register">
+        <label for="name">नाम (Name)</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="phone">फ़ोन नंबर (Phone)</label>
+        <input type="text" name="phone" id="phone">
+
+        <label for="category">व्यवसाय का प्रकार (Category)</label>
+        <input type="text" name="category" id="category">
+
+        <label for="location">लोकेशन (Location)</label>
+        <input type="text" name="location" id="location">
+
+        <label for="location_lat">Latitude:</label>
+        <input type="text" id="location_lat" name="location_lat" required>
+
+        <label for="location_lng">Longitude:</label>
+        <input type="text" id="location_lng" name="location_lng" required>
+
+        <button type="submit" class="btn-register">Submit | सबमिट करें</button>
+    </form>
+</div>
+
+{% endblock %}
