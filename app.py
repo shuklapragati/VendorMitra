@@ -11,7 +11,9 @@ def init_db():
     name TEXT NOT NULL,
     phone TEXT,
     category TEXT,
-    location TEXT
+    location TEXT,
+    location_lat TEXT,
+    location_lng TEXT
     )''')
     conn.commit()
     conn.close()
